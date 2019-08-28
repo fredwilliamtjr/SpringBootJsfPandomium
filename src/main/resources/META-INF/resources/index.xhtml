@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+  <title>SpringBootJsfPandomium</title>
+</h:head>
+
+<h:body>
+  <h:form id="helloworld-form">
+
+    <p:panel header="SpringBootJsfPandomium">
+      <h:panelGrid columns="2" cellpadding="4">
+        <h:outputText value="Nome: " />
+        <p:inputText value="#{index.pessoa.nome}" />
+
+        <h:outputText value="Sobrenome: " />
+        <p:inputText value="#{index.pessoa.sobreNome}" />
+
+        <p:commandButton id="submit" value="Enviar" update="panelGrid"  oncomplete="PF('panelGrid').show()" />
+      </h:panelGrid>
+    </p:panel>
+
+    <p:dialog header="Olá" widgetVar="panelGrid" modal="true" resizable="false">
+      <h:panelGrid id="panelGrid" columns="1" cellpadding="4">
+        <h:outputText value="#{index.exibir()}" />
+      </h:panelGrid>
+    </p:dialog>
+
+  </h:form>
+</h:body>
+</html>

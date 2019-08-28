@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.panda-lang:panda-framework:indev-0.8.87">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/panda-lang/panda-framework/indev-0.8.87/panda-framework-indev-0.8.87.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/panda-lang/panda-framework/indev-0.8.87/panda-framework-indev-0.8.87-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/panda-lang/panda-framework/indev-0.8.87/panda-framework-indev-0.8.87-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
