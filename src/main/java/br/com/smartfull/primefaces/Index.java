@@ -1,5 +1,7 @@
 package br.com.smartfull.primefaces;
 
+import org.primefaces.PrimeFaces;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -19,6 +21,7 @@ public class Index implements Serializable {
     }
 
     public String exibir() {
+        //PrimeFaces.current().executeScript("teste");
         return "Olá " + pessoa.getNome() + " " + pessoa.getSobreNome() + "!";
     }
 

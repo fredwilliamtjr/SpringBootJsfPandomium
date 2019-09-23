@@ -1,6 +1,5 @@
 package br.com.smartfull;
 
-import org.cef.CefSettings;
 import org.panda_lang.pandomium.Pandomium;
 import org.panda_lang.pandomium.settings.PandomiumSettings;
 import org.panda_lang.pandomium.wrapper.PandomiumBrowser;
@@ -17,7 +16,7 @@ import java.awt.event.WindowEvent;
 public class SpringPrimeFacesApplication {
 
     public static Dimension redimensionarFrameTotal() {
-        return (new Dimension((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth(),(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight()));
+        return (new Dimension((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth(), (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight()));
     }
 
     public static void main(String[] args) {
@@ -25,7 +24,7 @@ public class SpringPrimeFacesApplication {
         Pandomium pandomium = new Pandomium(settings);
         pandomium.initialize();
         PandomiumClient client = pandomium.createClient();
-        PandomiumBrowser browser = client.loadURL("http://localhost:8080/index.xhtml");
+        PandomiumBrowser browser = client.loadURL("http://localhost:9090/login.xhtml");
         final JFrame frame = new JFrame();
         frame.getContentPane().add(browser.toAWTComponent(), BorderLayout.CENTER);
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
