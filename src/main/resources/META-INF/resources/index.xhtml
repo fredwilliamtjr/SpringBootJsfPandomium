@@ -12,22 +12,27 @@
   <h:form id="helloworld-form">
 
     <p:panel header="SpringBootJsfPandomium">
-      <h:panelGrid columns="2" cellpadding="4">
+      <h:panelGrid columns="7" cellpadding="4">
         <h:outputText value="Nome: " />
-        <p:inputText value="#{index.pessoa.nome}" />
-
+        <p:inputText id="inputTextNome" value="#{index.pessoaDto.nome}" />
         <h:outputText value="Sobrenome: " />
-        <p:inputText value="#{index.pessoa.sobreNome}" />
-
-        <p:commandButton id="submit" value="Enviar" update="panelGrid"  oncomplete="PF('panelGrid').show()" />
+        <p:inputText id="inputTextSobreNome" value="#{index.pessoaDto.sobreNome}" />
+        <p:commandButton value="Salvar" action="#{index.salvar()}" process="@this inputTextNome inputTextSobreNome " update="@this dataTablePessoas" />
       </h:panelGrid>
+
+      <p:dataTable id="dataTablePessoas" widgetVar="dataTablePessoas" value="#{index.pessoaList}" var="pessoa" emptyMessage="" >
+
+        <p:column headerText="Nome" >
+          <p:outputLabel value="#{pessoa.nome}" />
+        </p:column>
+
+        <p:column headerText="Sobre Nome" >
+          <p:outputLabel value="#{pessoa.sobreNome}" />
+        </p:column>
+
+      </p:dataTable>
+
     </p:panel>
-
-    <p:dialog header="Olá" widgetVar="panelGrid" modal="true" resizable="false">
-      <h:panelGrid id="panelGrid" columns="1" cellpadding="4">
-        <h:outputText value="#{index.exibir()}" />
-      </h:panelGrid>
-    </p:dialog>
 
   </h:form>
 </h:body>

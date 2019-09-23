@@ -4,7 +4,7 @@ import javax.inject.Named;
 import java.io.Serializable;
 
 @Named
-public class Pessoa implements Serializable {
+public class PessoaDto implements Serializable {
 
     private String nome = "Fred";
     private String sobreNome = "Junior";

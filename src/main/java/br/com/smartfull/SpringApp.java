@@ -21,6 +21,7 @@ public class SpringApp {
 
     public static void main(String[] args) {
         PandomiumSettings settings = PandomiumSettings.getDefaultSettingsBuilder().build();
+        settings.getCefSettings().log_file = "Pandomium.log";
         Pandomium pandomium = new Pandomium(settings);
         pandomium.initialize();
         PandomiumClient client = pandomium.createClient();
