@@ -1,6 +1,6 @@
-package br.com.smartfull.primefaces;
+package br.com.smartfull.springbootjsfpandomium.bean;
 
-import org.primefaces.PrimeFaces;
+import br.com.smartfull.springbootjsfpandomium.dto.Pessoa;
 
 import javax.inject.Inject;
 import javax.inject.Named;

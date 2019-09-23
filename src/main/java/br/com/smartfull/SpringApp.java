@@ -13,7 +13,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 @SpringBootApplication
-public class SpringPrimeFacesApplication {
+public class SpringApp {
 
     public static Dimension redimensionarFrameTotal() {
         return (new Dimension((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth(), (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight()));
@@ -24,7 +24,7 @@ public class SpringPrimeFacesApplication {
         Pandomium pandomium = new Pandomium(settings);
         pandomium.initialize();
         PandomiumClient client = pandomium.createClient();
-        PandomiumBrowser browser = client.loadURL("http://localhost:9090/login.xhtml");
+        PandomiumBrowser browser = client.loadURL("http://localhost:9090/index.xhtml");
         final JFrame frame = new JFrame();
         frame.getContentPane().add(browser.toAWTComponent(), BorderLayout.CENTER);
         frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -39,7 +39,7 @@ public class SpringPrimeFacesApplication {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         Dimension dimension = redimensionarFrameTotal();
         frame.setSize(dimension);
-        SpringApplication.run(SpringPrimeFacesApplication.class, args);
+        SpringApplication.run(SpringApp.class, args);
         frame.setVisible(true);
     }
 }

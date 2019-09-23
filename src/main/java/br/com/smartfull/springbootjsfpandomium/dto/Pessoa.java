@@ -1,4 +1,4 @@
-package br.com.smartfull.primefaces;
+package br.com.smartfull.springbootjsfpandomium.dto;
 
 import javax.inject.Named;
 import java.io.Serializable;
