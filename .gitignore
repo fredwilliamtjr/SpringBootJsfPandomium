@@ -1,2 +1,5 @@
 /.idea
 /SpringBootJsfPandomium.iml
+/debug.log
+/target/
+/blob_storage/
